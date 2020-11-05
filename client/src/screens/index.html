@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="text/javascript">
+        var test = "<h1 style='color: red; width: 300px; height: 100px'> Mật Khẩu của bạn <h1>"
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "gmhoang.developer@gmail.com",
+                Password: "Hoang@123",
+                To: 'giangminhhoang999@gmail.com',
+                From: "gmhoang.developer@gmail.com",
+                Subject: "This is the subject",
+                Body: "<h1 style='color: red; width: 300px; height: 100px'> Mật Khẩu của bạn <h1>"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <form method="post">
+        <input type="button" value="Send Email" onclick="sendEmail()" />
+    </form>
+</body>
+
+</html>
